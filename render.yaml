@@ -1,0 +1,11 @@
+databases: []  # No databases needed for a static site
+services:
+  - type: web
+    name: norsk-krypto-casino
+    repo: https://github.com/xcasdev/norsk-krypto-casino  # Your repository; update if needed
+    buildCommand: ""  # No build command required
+    staticPublishPath: ./  # Sets the publish directory to the root
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html  # Ensures single-page app routing works 
