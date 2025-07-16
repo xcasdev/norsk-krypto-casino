@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://norsk-krypto-casino.onrender.com/sitemap.xml 
