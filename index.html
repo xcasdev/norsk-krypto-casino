@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opplev trygt og anonymt casinospill i Norge uten KYC. Vi tilbyr et bredt utvalg av spill med full personvern og raske utbetalinger.">
+    <meta name="author" content="Erik Hansen">
+    <meta property="og:title" content="Anonymt Casino Norge">
+    <meta property="og:description" content="Den tryggeste måten å spille på uten å avsløre din identitet. 100% anonymitet garantert.">
+    <meta property="og:url" content="https://norsk-krypto-casino.pages.dev/">
+    <meta property="og:type" content="website">
+    <title>Anonymt Casino Norge | Trygg og Sikker Spilling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            transform: translateY(-2px);
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;  /* Initially hide nav on mobile for better UX */
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-item {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-indigo-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-user-secret text-3xl mr-3 text-indigo-300"></i>
+                    <button onclick="showPage('home')" class="text-inherit hover:text-indigo-300 focus:outline-none" aria-label="Go to Home Page">
+                        <h1 class="text-2xl md:text-3xl font-bold">Anonymt<span class="text-indigo-300">Casino</span></h1>
+                    </button>
+                </div>
+                <nav class="flex space-x-1 md:space-x-4">
+                    <button onclick="showPage('home')" class="nav-item bg-indigo-700 px-3 py-2 rounded-lg font-medium hover:bg-indigo-600" aria-label="Go to Home Page">
+                        <i class="fas fa-home mr-1"></i> Hjem
+                    </button>
+                    <button onclick="showPage('games')" class="nav-item bg-indigo-700 px-3 py-2 rounded-lg font-medium hover:bg-indigo-600" aria-label="Go to Games Page">
+                        <i class="fas fa-gamepad mr-1"></i> Spill
+                    </button>
+                    <button onclick="showPage('about')" class="nav-item bg-indigo-700 px-3 py-2 rounded-lg font-medium hover:bg-indigo-600" aria-label="Go to About Page">
+                        <i class="fas fa-info-circle mr-1"></i> Om Oss
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="mb-12">
+                <div class="bg-gradient-to-r from-indigo-800 to-purple-700 rounded-xl p-8 text-white shadow-xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Velkommen til Anonymt Casino Norge</h2>
+                    <p class="text-lg mb-6">Den tryggeste måten å spille på uten å avsløre din identitet. 100% anonymitet garantert.</p>
+                    <a href="https://playnokyc.com" class="bg-white text-indigo-800 px-6 py-3 rounded-lg font-bold hover:bg-indigo-100 transition inline-block" aria-label="Besøk no KYC casino">
+                        Besøk no KYC casino <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Hvorfor velge oss?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user-shield text-indigo-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Full Anonymitet</h3>
+                        <p class="text-gray-700">Ingen personlig informasjon kreves. Spill trygt uten bekymringer.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-bolt text-indigo-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Raske Utbetalinger</h3>
+                        <p class="text-gray-700">Få pengene dine utbetalt på minutter, ikke dager.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-indigo-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Sikker Spilling</h3>
+                        <p class="text-gray-700">Avansert kryptering sikrer at alle transaksjoner er trygge.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Slik fungerer det</h2>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-col md:flex-row items-center mb-6">
+                            <div class="bg-indigo-100 text-indigo-800 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Opprett en anonym wallet</h3>
+                                <p>Bruk kryptovaluta eller anonyme betalingsmetoder for å sette inn penger.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center mb-6">
+                            <div class="bg-indigo-100 text-indigo-800 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Velg ditt favorittspill</h3>
+                                <p>Vi tilbyr et bredt utvalg av kasinospill fra ledende utviklere.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="bg-indigo-100 text-indigo-800 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Ta ut gevinsten din</h3>
+                                <p>Få pengene dine utbetalt direkte til din anonyme wallet uten ventetid.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Games Page -->
+        <div id="games" class="page">
+            <section class="mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold mb-6 text-indigo-900">Våre Populære Spill</h1>
+                <p class="text-lg text-gray-700 mb-6">Utforsk vårt bredt utvalg av anonyme kasinospill. Alle spillene våre er testet for rettferdighet og tilbyr spennende spillopplevelser.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-indigo-800 flex items-center justify-center">
+                            <i class="fas fa-dice text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">Anonymt Roulette</h3>
+                            <p class="text-gray-600 mb-4">Klassisk europeisk roulette med anonyme innsatser. Spill direkte mot dealeren.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-purple-800 flex items-center justify-center">
+                            <i class="fas fa-coins text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">Bitcoin Blackjack</h3>
+                            <p class="text-gray-600 mb-4">Slå dealeren uten å gå over 21. Anonym blackjack med lav husfordel.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-blue-800 flex items-center justify-center">
+                            <i class="fas fa-slots text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">Anonyme Spilleautomater</h3>
+                            <p class="text-gray-600 mb-4">Over 500 forskjellige spilleautomater med progressive jackpotter.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-green-800 flex items-center justify-center">
+                            <i class="fas fa-poker-cards text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">Anonym Poker</h3>
+                            <p class="text-gray-600 mb-4">Texas Hold'em mot anonyme spillere fra hele verden.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-red-800 flex items-center justify-center">
+                            <i class="fas fa-dice-d20 text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">Kryptocrash</h3>
+                            <p class="text-gray-600 mb-4">Vårt mest populære spill hvor du kan multiplisere innsatsen din eksponentielt.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="h-48 bg-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-gem text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-indigo-800">VIP Baccarat</h3>
+                            <p class="text-gray-600 mb-4">Eksklusivt baccarat for høye innsatser med anonyme high-rollers.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Spill nå</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-indigo-50 rounded-xl p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-indigo-900">Anonyme Betalingsmetoder</h2>
+                <p class="text-gray-700 mb-6">Vi tilbyr flere måter å spille anonymt på:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                        <i class="fab fa-bitcoin text-3xl text-orange-500 mb-2"></i>
+                        <span class="font-medium">Bitcoin</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                        <i class="fab fa-ethereum text-3xl text-purple-500 mb-2"></i>
+                        <span class="font-medium">Ethereum</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-green-500 mb-2"></i>
+                        <span class="font-medium">Monero</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center">
+                        <i class="fas fa-gift text-3xl text-red-500 mb-2"></i>
+                        <span class="font-medium">Gavekort</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <section class="mb-12">
+                <div class="bg-gradient-to-r from-indigo-800 to-purple-700 rounded-xl p-8 text-white shadow-xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Om Anonymt Casino Norge</h2>
+                    <p class="text-lg">Vår visjon er å tilby den tryggeste og mest anonyme spillopplevelsen for norske spillere.</p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Vår Historie</h2>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <p class="mb-4 text-gray-700">Anonymt Casino Norge ble grunnlagt i 2018 av en gruppe norske spillentusiaster som ønsket å skape et trygt alternativ for spillere som verdsetter privatliv.</p>
+                    <p class="mb-4 text-gray-700">Med økende bekymring for personvern og datahåndtering i tradisjonelle online casinoer, så vi et behov for en løsning som kombinerer spenning med anonymitet.</p>
+                    <p class="text-gray-700">I dag er vi Norges ledende anonyme casino med over 50 000 aktive brukere som stoler på oss for en trygg og rettferdig spillopplevelse.</p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Våre Verdier</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-indigo-800 flex items-center">
+                            <i class="fas fa-user-secret text-indigo-600 mr-3"></i> Anonymitet
+                        </h3>
+                        <p class="text-gray-700">Vi krever ingen personlig informasjon, og alle transaksjoner behandles uten kobling til din virkelige identitet.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-indigo-800 flex items-center">
+                            <i class="fas fa-balance-scale text-indigo-600 mr-3"></i> Rettferdighet
+                        </h3>
+                        <p class="text-gray-700">Alle våre spill bruker sertifiserte tilfeldighetstallgeneratorer for å sikre rettferdige resultater.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-indigo-800 flex items-center">
+                            <i class="fas fa-lock text-indigo-600 mr-3"></i> Sikkerhet
+                        </h3>
+                        <p class="text-gray-700">Avansert kryptering og sikre protokoller beskytter alle dine transaksjoner og spilldata.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-indigo-800 flex items-center">
+                            <i class="fas fa-headset text-indigo-600 mr-3"></i> Kundeservice
+                        </h3>
+                        <p class="text-gray-700">Vårt anonyme supportteam er tilgjengelig 24/7 for å hjelpe deg med alle spørsmål.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Ofte Stilte Spørsmål</h2>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="border-b border-gray-200 p-6">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Er dette lovlig i Norge?</h3>
+                        <p class="text-gray-700">Vi opererer under internasjonale spilllisenser og tilbyr våre tjenester i henhold til gjeldende lover. Det er spilleren sitt ansvar å følge lokale lover og regler.</p>
+                    </div>
+                    <div class="border-b border-gray-200 p-6">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Hvordan sikrer dere anonymiteten?</h3>
+                        <p class="text-gray-700">Vi krever ingen personopplysninger, og alle transaksjoner håndteres gjennom kryptovaluta eller anonyme betalingsløsninger. Ingen logger eller spor lagres som kan knyttes til din identitet.</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-800">Hvordan kan jeg være sikker på at spillet er rettferdig?</h3>
+                        <p class="text-gray-700">Alle våre spill er sertifisert av uavhengige tredjeparter for å sikre at tilfeldighetstallgeneratorene fungerer som de skal. Du kan også verifisere hvert enkelt spillresultat gjennom vår transparente blockchain-teknologi.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>  <!-- New: Added author and bio section -->
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-900">Om Forfatteren</h2>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-800">Erik Hansen</h3>  <!-- Updated to a common Norwegian name -->
+                    <p class="text-gray-700">Erik Hansen er en engasjert tilhenger av personvern i nettspill, med år av erfaring som en No KYC casino-spiller som fokuserer på sikre og anonyme opplevelser.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Terms Page -->
+        <div id="terms" class="page">
+            <section class="mb-12">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-3xl font-bold mb-6 text-indigo-900">Vilkår og betingelser</h2>
+                    <p class="text-gray-700 mb-4">Disse vilkårene regulerer bruken av vår tjeneste. Ved å bruke nettstedet samtykker du i følgende: Ingen personopplysninger lagres, spilling er kun for voksne over 18 år, og all aktivitet er underlagt norsk lov. Vi forbeholder oss retten til å endre disse vilkårene uten varsel.</p>
+                    <p class="text-gray-700">Kontakt oss via e-post for spørsmål: support@anonymtcasino.no.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Privacy Page -->
+        <div id="privacy" class="page">
+            <section class="mb-12">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-3xl font-bold mb-6 text-indigo-900">Personvern</h2>
+                    <p class="text-gray-700 mb-4">Vi verdsetter ditt personvern og lagrer ingen personopplysninger. All data håndteres anonymt via krypterte forbindelser. Vi deler ikke informasjon med tredjeparter, og du har rett til å be om sletting av eventuell data. Les mer om våre retningslinjer for databeskyttelse.</p>
+                    <p class="text-gray-700">For mer informasjon, kontakt oss på support@anonymtcasino.no.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Responsible Gaming Page -->
+        <div id="responsible-gaming" class="page">
+            <section class="mb-12">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-3xl font-bold mb-6 text-indigo-900">Ansvarlig spill</h2>
+                    <p class="text-gray-700 mb-4">Spill ansvarlig for å unngå avhengighet. Sett grenser for tid og penger, ta pauser, og søk hjelp hvis spillingen blir et problem. Vi tilbyr verktøy som tidsbegrensning og selvutelukkelse. Hvis du trenger støtte, kontakt hjelpelinjen for spillavhengighet i Norge.</p>
+                    <p class="text-gray-700">Besøk <a href="https://www.helsedirektoratet.no" class="text-indigo-600 hover:underline">Helsedirektoratet</a> for mer informasjon.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-user-secret mr-2 text-indigo-300"></i> AnonymtCasino
+                    </h3>
+                    <p class="text-gray-400">Norges tryggeste anonyme casino siden 2018.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hurtiglenker</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showPage('home')" class="text-gray-400 hover:text-white">Hjem</button></li>
+                        <li><button onclick="showPage('games')" class="text-gray-400 hover:text-white">Spill</button></li>
+                        <li><button onclick="showPage('about')" class="text-gray-400 hover:text-white">Om Oss</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Betingelser</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showPage('terms')" class="text-gray-400 hover:text-white">Vilkår og betingelser</button></li>
+                        <li><button onclick="showPage('privacy')" class="text-gray-400 hover:text-white">Personvern</button></li>
+                        <li><button onclick="showPage('responsible-gaming')" class="text-gray-400 hover:text-white">Ansvarlig spill</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontakt Oss</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-indigo-300"></i>
+                            <span class="text-gray-400">support@anonymtcasino.no</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-comment-alt mr-2 text-indigo-300"></i>
+                            <span class="text-gray-400">Live Chat 24/7</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-indigo-300"></i>
+                            <span class="text-gray-400">Storgata 1, 0155 Oslo, Norway</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2025 Anonymt Casino Norge. Alle rettigheter reservert.</p>
+                <p class="mt-2 text-sm">Spill ansvarlig. Kun for personer over 18 år.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    
+        document.querySelectorAll('.nav-item').forEach(button => {
+            button.setAttribute('aria-expanded', 'false');  // Add ARIA for accessibility
+            button.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    const nav = document.querySelector('nav');
+                    if (nav) {
+                        nav.classList.toggle('hidden');  // Use 'hidden' class for reliability
+                        button.setAttribute('aria-expanded', nav.classList.contains('hidden') ? 'false' : 'true');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
